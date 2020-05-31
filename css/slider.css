@@ -1,0 +1,232 @@
+/* Слайдер */
+.slick-slider {
+    min-width: 0;
+}
+
+/* Слайдер ініціалізований */
+.slick-slider.slick-initialized {}
+
+/* Слайдер з крапками */
+.slick-slider.slick-dotted {}
+
+/* Обмежуючий контейнер */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Послідовність слайдів */
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide {}
+
+/* Активний Слайд */
+.slick-slide.slick-active {}
+
+/* Слайд поточний */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Клонований слайд */
+.slick-slide.slick-cloned {}
+
+/* Стрілки */
+.slick-arrow {
+    cursor: pointer;
+}
+
+/* Стрілка вліво */
+.slick-arrow.slick-prev {}
+
+/* Стрілка вправо */
+.slick-arrow.slick-next {}
+
+/* Стрілка не активна */
+.slick-arrow.slick-disabled {}
+
+/* Крапки */
+.slick-dots {}
+
+.slick-dots li {}
+
+/* Активна крапка */
+.slick-dots li.slick-active {}
+
+/* Елемент крапки */
+.slick-dots li button {
+    cursor: pointer;
+}
+
+/* Стилізація конкретного слайдера */
+/* Наприклад слайдера з id="slider-01" */
+
+.slider {
+    position: relative;
+    padding: 0px 25px;
+}
+
+.slider .slick-arrow {
+    border-radius: 50%;
+    border-color: transparent;
+    outline: none;
+    font-size: 0;
+    position: absolute;
+    opacity: .7;
+    /* Прозорість стрілок */
+    /*    top: 50%;*/
+    bottom: 0;
+    transform: translateY(-50%);
+    width: 18px;
+    /* Розміри стрілок */
+    height: 32px;
+    /* Розміри стрілок */
+    transition: opacity .3s ease;
+}
+
+.slider .slick-arrow:hover {
+    opacity: 1;
+}
+
+.slider .slick-arrow:before,
+.slider .slick-arrow:after {
+    background-color: #777;
+    /* колір лінії стрілок */
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    /* товщина лінії стрілок */
+    border-radius: 2px;
+    /* радіус заокруглення 1/2 товщини */
+}
+
+.slider .slick-arrow:before {
+    transform: rotate(-45deg) translateY(25%);
+    transform-origin: left bottom;
+}
+
+.slider .slick-arrow:after {
+    transform: rotate(45deg) translateY(-25%);
+    transform-origin: left top;
+}
+
+.slider .slick-arrow.slick-next:before {
+    transform: rotate(45deg) translateY(25%);
+    transform-origin: right bottom;
+}
+
+.slider .slick-arrow.slick-next:after {
+    transform: rotate(-45deg) translateY(-25%);
+    transform-origin: right top;
+}
+
+.slider .slick-arrow.slick-prev {
+    right: 0;
+    margin-right: 12px;
+    /* Відступ для < стрілки зліва */
+    /*    margin-left: 30px; */
+    z-index: 1;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    /* Відступ для > стрілки справа */
+    z-index: 1;
+}
+
+.slider .slick-arrow.slick-disabled {
+    opacity: 0.3;
+}
+
+.slider .slick-dots {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* Відступ для крапок знизу */
+    /*    margin-bottom: 50px; */
+    margin-right: 25px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 5px 0px;
+}
+
+.slider .slick-dots button {
+    border: none;
+    outline: none;
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+    border-radius: 50%;
+}
+
+#blue .slider .slick-dots li.slick-active button {
+    background-color: #29ABE2;
+}
+
+#red .slider .slick-dots li.slick-active button {
+    background-color: #FF0000;
+}
+
+#green .slider .slick-dots li.slick-active button {
+    background-color: #22B573;
+}
+
+#yellow .slider .slick-dots li.slick-active button {
+    background-color: #FFFF00;
+}
+
+#pink .slider .slick-dots li.slick-active button {
+    background-color: #FF00FF;
+}
+
+#ligr .slider .slick-dots li.slick-active button {
+    background-color: #8CC63F;
+}
+
+#orange .slider .slick-dots li.slick-active button {
+    background-color: #F7931E;
+}
+
+.slider .item {
+    padding: 0;
+    /* Інтервал між слайдами */
+}
+
+.slider .item img {
+    max-width: 100%;
+}
+
+@media screen and (orientation: portrait) {
+    .slider {
+        padding-bottom:20px;
+    }
+    .slider .slick-dots {
+        right: auto;
+        left:50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        margin-right: 0;
+        height: auto;
+        flex-direction: row;
+    }
+    
+    .slider .slick-dots li {
+        margin: 0px 10px;
+    }
+}

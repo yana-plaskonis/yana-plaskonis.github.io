@@ -1,0 +1,255 @@
+#split-slider {
+    background-color: #bec0b5;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider .records {
+    position: absolute;
+    height: 80%;
+    left: 20%;
+    top: 50%;
+     -webkit-transform: translate(-20%, -50%);
+    transform: translate(-20%, -50%);
+    margin: 0;
+    z-index: 2;
+}
+
+#split-slider {
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#split-slider > button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.slideshow {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slideshow .slider {
+    width: 100vw;
+    height: 100vw;
+    z-index: 2;
+
+}
+
+.slideshow .slider * {
+    outline: none;
+}
+
+.slideshow .slider .item {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    padding: 80px 30px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border: none;
+}
+
+.slideshow .slider .item .text {
+    display: none;
+}
+
+.caption {
+    display: flex;
+    height: 80%;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 85%;
+    padding: 45px;
+}
+/*
+
+.slider .item .records:hover {
+    transform: translateX(15%);
+     transition: transform .5s ease;
+}
+*/
+
+.caption a {
+    cursor: pointer;
+    display: block;
+    width: 48px;
+    position: relative;
+    height: 48px;
+    border-radius: 50%;
+    z-index: 1;
+    padding: 10px;
+    background-color: #29ABE2;
+}
+
+.caption a img {
+    display: block;
+    max-width: 100%;
+}
+
+.caption a span {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    padding-top: 8px;
+    font-size: .8em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #29ABE2;
+}
+
+h1 {
+    position: relative;
+    margin-bottom: 12px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.caption p {
+    line-height: 1.8;
+    margin-bottom: 2em;
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.item > img {
+    position: absolute;
+    height: 80%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 50px;
+    z-index: 3;
+}
+
+.slideshow .slick-dots {
+    position: absolute;
+    z-index: 100;
+    width: 40px;
+    height: 100%;
+    max-height: 100vh;
+    margin-right: 20px;
+    top: 0;
+    right: 0;
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.slideshow .slick-dots li {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.slideshow .slick-dots li button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 0;
+}
+
+.slideshow .slick-dots li button:before {
+    content: '';
+    background: #000;
+    color: #000;
+    height: 2px;
+    width: 20px;
+    border-radius: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    opacity: 0.6;
+}
+
+.slideshow .slick-dots li.slick-active button:before {
+    width: 40px;
+    opacity: 1;
+}
+
+.slideshow.slideshow-right {
+    left: 0;
+    z-index: 1;
+    width: 50vw;
+    pointer-events: none;
+}
+
+.slideshow.slideshow-right .slider {
+    left: 0;
+    position: absolute;
+}
+
+.slideshow-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    font-size: 80px;
+    width: 100vw;
+    text-align: center;
+    font-weight: 100;
+    pointer-events: none;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    line-height: 0.8;
+}
+
+@media (max-width: 767px) {
+    .slideshow-text {
+        font-size: 40px;
+    }
+}
+
+.the-most {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    max-width: 200px;
+    padding: 10px;
+}
+
+.the-most img {
+    max-width: 100%;
+}

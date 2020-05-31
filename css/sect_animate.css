@@ -1,0 +1,16 @@
+section .info #records {
+    transform: none;
+    transform-origin: 21% 50%;
+    transition: transform .1s ease;
+    transition-delay: .5s;
+}
+
+.current .info #records {
+    transform: rotate(360deg);
+    transition: transform 1.2s ease;
+    transition-delay: 0s;
+}
+
+.current.firsttime .info #records {
+    transition-delay: 4s;
+}

@@ -1,0 +1,417 @@
+#sect_nroll {
+    background-image: url(../img/bg-rocknroll.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#sect_rock {
+    background-image: url(../img/bg-rock.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#sect_alternative {
+    background-image: url(../img/bg-alternative.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#sect_metal {
+    background-image: url(../img/bg-metal.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#sect_punk {
+    background-image: url(../img/bg-punk.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#sect_indie {
+    background-image: url(../img/bg_indie.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#sect_grunge {
+    background-image: url(../img/bg-grunge.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    padding: 50px 40px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.info div {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 85%;
+    padding: 0 45px;
+}
+
+.info div a {
+    cursor: pointer;
+    display: block;
+    width: 48px;
+    position: relative;
+    height: 48px;
+    border-radius: 50%;
+    z-index: 1;
+    padding: 10px;
+    transition: transform .5s ease;
+}
+
+.info div a:hover {
+    transform: scale(1.1);
+}
+
+.info a img {
+    display: block;
+    max-width: 100%;
+}
+
+.info a span {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    padding-top: 8px;
+    font-size: .8em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#sect_nroll .info a span {
+    color: #29ABE2;
+}
+
+#sect_rock .info a span {
+    color: #FF0000;
+}
+
+#sect_alternative .info a span {
+    color: #22B573;
+}
+
+#sect_metal .info a span {
+    color: #FFFF00;
+}
+
+#sect_punk .info a span {
+    color: #FF00FF;
+}
+
+#sect_indie .info a span {
+    color: #8CC63F;
+}
+
+#sect_grunge .info a span {
+    color: #F7931E;
+}
+
+a.butblue {
+    background-color: #29ABE2;
+}
+
+a.butred {
+    background-color: #FF0000;
+}
+
+a.butgreen {
+    background-color: #22B573;
+}
+
+a.butyellow {
+    background-color: #FFFF00;
+}
+
+a.butpink {
+    background-color: #FF00FF;
+}
+
+a.butligr {
+    background-color: #8CC63F;
+}
+
+a.butorange {
+    background-color: #F7931E;
+}
+
+.info p {
+    line-height: 1.9;
+    margin-bottom: 2.1em;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.info svg {
+    position: absolute;
+    right: 0;
+    top: 47%;
+    transform: translateY(-50%);
+    width: 94%;
+    z-index: 0;
+}
+
+.info svg > path {
+    transform: none;
+}
+
+.info svg g#white path {
+    fill: #ccc;
+}
+
+.info svg g#white circle {
+    stroke: #393939;
+}
+
+
+.buttons {
+    position: absolute;
+    top: 0;
+    right:0;
+    transform: translateX(-30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 32px;
+    z-index: 9999;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 9999;
+}
+
+.arrow a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/arrow-01.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: .5;
+    transition: opacity .3s ease;
+}
+
+.arrow a:hover {
+    opacity: 1;
+}
+
+.arrow.up {
+    margin-top: 30px;
+}
+
+.arrow.down {
+    top: auto;
+    bottom: 0;
+    transform: rotate(180deg);
+    margin-bottom: 30px;
+}
+
+.vertical-menu {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-right: 20px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.vertical-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-menu ul li {
+    margin-bottom: 20px;
+}
+
+.vertical-menu ul li a {
+    display: block;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.vertical-menu [href="#sect_nroll"]:hover,
+.vertical-menu .on[href="#sect_nroll"] {
+     border: 2px solid #29ABE2;
+    background: #29ABE2;
+    transition: border .3s ease;
+}
+
+.vertical-menu [href="#sect_rock"]:hover,
+.vertical-menu .on[href="#sect_rock"] {
+     border: 2px solid #FF0000;
+    background: #FF0000;
+    transition: border .3s ease;
+}
+
+.vertical-menu [href="#sect_alternative"]:hover,
+.vertical-menu .on[href="#sect_alternative"] {
+     border: 2px solid #22B573;
+    background: #22B573;
+    transition: border .3s ease;
+}
+.vertical-menu [href="#sect_metal"]:hover,
+.vertical-menu .on[href="#sect_metal"] {
+     border: 2px solid #FFFF00;
+    background: #FFFF00;
+    transition: border .3s ease;
+}
+
+.vertical-menu [href="#sect_punk"]:hover,
+.vertical-menu .on[href="#sect_punk"] {
+     border: 2px solid #FF00FF;
+    background: #FF00FF;
+    transition: border .3s ease;
+}
+
+.vertical-menu [href="#sect_indie"]:hover,
+.vertical-menu .on[href="#sect_indie"] {
+     border: 2px solid #8CC63F;
+    background: #8CC63F;
+    transition: border .3s ease;
+}
+
+.vertical-menu [href="#sect_grunge"]:hover,
+.vertical-menu .on[href="#sect_grunge"] {
+     border: 2px solid #F7931E;
+    background: #F7931E;
+    transition: border .3s ease;
+}
+
+@media screen and (max-aspect-ratio:16/10) {
+    .info svg {
+        width: 100%;
+    }
+
+    .info div {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .info {
+        height:100%;
+        padding-bottom: 60px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .info svg {
+        width: 185%;
+        top: 0;
+        left: 0;
+        right: auto;
+        transform: none;
+        margin-top: 60px;
+        margin-left: 20px;
+    }
+    
+    .info div {
+        width: 100%;
+        padding: 0 25px 0 0;
+    }
+    
+    .info p {
+        line-height: 1.3;
+        font-size: .9em;
+        margin-bottom: 1em;
+    }
+
+}

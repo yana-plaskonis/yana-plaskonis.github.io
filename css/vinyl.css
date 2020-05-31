@@ -1,0 +1,327 @@
+header.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vinyl {
+    width: 90vh;
+    max-width: 90%;
+    position: relative;
+}
+
+.vinyl svg {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    z-index:1;
+}
+
+#vinyl>circle:first-child {
+    fill: #000;
+}
+
+.vinyl:before {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
+    content:"";
+    display:block;
+    width:80%;
+    height:80%;
+    border-radius: 50%;
+    background-color: #000;
+    -webkit-filter: drop-shadow( 16px 16px 8px rgba(0, 0, 0, 1));
+  filter: drop-shadow( 16px 16px 8px rgba(0, 0, 0, 1));
+    z-index:0;
+}
+
+.track + g {
+    position: relative;
+}
+#soundbox g path {
+    fill: #000;
+    stroke: #333;
+    stroke-width: 4px;
+}
+
+#soundbox circle {
+     stroke: #333;
+    stroke-width: 6px;
+}
+
+.fill {
+    fill: #ccc;
+}
+
+#nrollleb path,
+#play.open.nroll path.color {
+    fill: #29ABE2;
+}
+
+#rockleb path,
+#play.open.rock path.color {
+    fill: #FF0000;
+}
+
+#alternativeleb path,
+#alternativeleb polygon,
+#play.open.alternative path.color {
+    fill: #22B573;
+}
+
+#metalleb path,
+#metalleb polygon,
+#play.open.metal path.color {
+    fill: #FFFF00;
+}
+
+#punkleb path,
+#play.open.punk path.color {
+    fill: #FF00FF;
+}
+
+#indieleb path,
+#play.open.indie path.color {
+    fill: #8CC63F;
+}
+
+#grungeleb path,
+#play.open.grunge path.color {
+    fill: #F7931E;
+}
+
+g g:nth-child(1) {
+    cursor: pointer;
+}
+
+#vinyl g g:nth-child(2) {
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+g g:nth-child(1) circle:nth-child(1) {
+    stroke: transparent;
+    stroke-width: 30px;
+}
+
+g g:nth-child(1) circle:nth-child(3) {
+    stroke: #000;
+    stroke-width: 3px;
+    transition: all 400ms ease;
+}
+
+g g:hover:nth-child(1) circle:nth-child(3) {
+    stroke-width: 8px;
+    transition: all 400ms ease;
+}
+
+g g:nth-child(1) circle:nth-child(2) {
+    stroke: #ddd;
+    stroke-width: 5px;
+    transition: all 400ms ease;
+}
+
+g g:hover:nth-child(1) circle:nth-child(2) {
+    stroke-width: 10px;
+    transition: all 400ms ease;
+}
+
+/**************************************************/
+
+#vinyl g g:hover:nth-child(1) circle {
+    opacity:1;
+    stroke-opacity:1;
+}
+
+/**************************************************/
+
+#vinyl g g:nth-child(1) + g:nth-child(2) {
+    position: relative;
+    z-index: 0;
+}
+
+#vinyl g g:hover:nth-child(1) + g:nth-child(2) {
+    position: relative;
+    z-index: 9;
+    opacity: 1;
+    transition: opacity .75s ease;
+}
+
+#vinyl g g:nth-child(1) + g.startplay:nth-child(2) {
+    opacity: 1;
+}
+
+#nroll g:hover:nth-child(1) circle:nth-child(2),
+#nroll:hover ~ #no circle,
+#nroll.active ~ #no circle {
+    stroke: #29ABE2;
+/*    transition: all 100ms ease;*/
+    fill-opacity: 0;
+}
+
+#rock g:hover:nth-child(1) circle:nth-child(2),
+#rock:hover ~ #no circle,
+#rock.active ~ #no circle {
+    stroke: #FF0000;
+/*    transition: all 100ms ease;*/
+    fill-opacity: 0;
+}
+
+#alternative g:hover:nth-child(1) circle:nth-child(2),
+#alternative:hover ~ #no circle,
+#alternative.active ~ #no circle {
+    stroke: #22B573;
+/*    transition: all 100ms ease;*/
+    fill-opacity: 0;
+}
+
+#metal g:hover:nth-child(1) circle:nth-child(2),
+#metal:hover ~ #no circle,
+#metal.active ~ #no circle {
+    stroke: #FFFF00;
+/*    transition: all 100ms ease;*/
+    fill-opacity: 0;
+}
+
+#punk g:hover:nth-child(1) circle:nth-child(2),
+#punk:hover ~ #no circle,
+#punk.active ~ #no circle {
+    stroke: #FF00FF;
+/*    transition: all 100ms ease;*/
+    fill-opacity: 0;
+}
+
+#indie g:hover:nth-child(1) circle:nth-child(2),
+#indie:hover ~ #no circle,
+#indie.active ~ #no circle {
+    stroke: #8CC63F;
+/*    transition: all 100ms ease;*/
+    fill-opacity: 0;
+}
+
+#grunge g:hover:nth-child(1) circle:nth-child(2),
+#grunge:hover ~ #no circle,
+#grunge.active ~ #no circle {
+    stroke: #F7931E;
+/*    transition: all 100ms ease;*/
+    fill-opacity: 0;
+}
+
+#nroll:hover ~ #no g path,
+#nroll.active ~ #no g path,
+#rock:hover ~ #no g path,
+#rock.active ~ #no g path,
+#alternative:hover ~ #no g path,
+#alternative.active ~ #no g path,
+#metal:hover ~ #no g path,
+#metal.active ~ #no g path,
+#punk:hover ~ #no g path,
+#punk.active ~ #no g path,
+#indie:hover ~ #no g path,
+#indie.active ~ #no g path,
+#grunge:hover ~ #no g path,
+#grunge.active ~ #no g path{
+    opacity: 0;
+} 
+/**************************************/
+
+#vinyl > g {
+    position: relative;
+    z-index:1;
+}
+
+#vinyl g.startplay,
+#vinyl > g.active {
+    z-index:-1;
+}
+
+#vinyl > g:hover {
+    z-index:9;
+}
+
+#vinyl circle {
+    opacity:.9;
+}
+
+/***************************/
+
+#vinyl g g circle {
+    opacity:1;
+}
+
+#vinyl g g circle:nth-child(2) {
+    opacity:.4;
+}
+
+/***************************/
+
+#vinyl > circle:first-child,
+#vinyl > circle:last-of-type {
+    stroke: #ccc;
+    stroke-width: 12px;
+    stroke-opacity: .5;
+    stroke-dasharray: 1.6;
+}
+
+#vinyl > circle:last-of-type {
+    stroke: #ccc;
+    transform: scale(.8);
+    stroke-width: 32px;
+    transform-origin: center center;
+}
+
+.vinyl #no circle {
+    stroke-width: 0;
+    stroke-opacity: .1;
+    fill:#333;
+    fill-opacity: 1;
+    z-index:8;
+}
+
+.vinyl #no g path {
+    fill:#000;
+    opacity: 1;
+}
+
+.vinyl #no circle + circle {
+    stroke-width: 2px;
+    stroke-opacity: .1;
+    fill:#000;
+}
+
+.track:hover + g {
+    position: absolute;
+    z-index: 99;
+}
+
+/**************************************/
+
+#play path {
+    opacity: 0;
+    fill: #000;
+    transform: scale(0.1);
+    transition: all 300ms ease;
+}
+
+#play.open path {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#soundbox.play {
+    transform: rotate(17deg);
+    transition: transform 1.5s cubic-bezier(.25, .67, .39, .85);
+    transform-origin: 81.7% 13.5%;
+}
+
+#vinyl.play {
+    transform: rotate(720deg);
+    transition-delay: 300ms;
+    transition: transform 4.2s ease-in;
+    transform-origin: 50.3% 50.3%;
+}
+
+@media screen and (orientation:portrait) {
+}

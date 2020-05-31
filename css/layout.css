@@ -1,0 +1,53 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section, header {
+    min-height: 100vh;  
+}
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+}
+
+/** Те, що потрібно для Full Page Scroll */
+
+#fullpage {
+    left: 0;
+    right: 0;
+    height: 100vh;
+    max-height: 100vh;
+/*    height: calc(var(--vh, 1vh) * 100);*/
+    overflow: hidden;
+    position: relative;
+}
+
+#fullpage > .section {
+    height: 100%;
+    max-height: 100vh;
+    position: relative;
+    padding-bottom: 6vh;
+}
+
+@media screen and (max-width:767px) {
+    
+    #fullpage > .section {
+        padding-bottom: 3vh;
+    }
+    
+}
